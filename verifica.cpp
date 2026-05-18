@@ -58,6 +58,14 @@ void schedulaProcessiES2(vector<Processo> vettProcessi)
            swap(vettProcessi[i],vettProcessi[i+1]);
 
         }
+        else if (vettProcessi[i].priorita==vettProcessi[i+1].priorita){
+            if(vettProcessi.durata[i]>vettProcessi[i+1].durata)
+                swap(vettProcessi[i],vettProcessi[i+1]);
+            else if  if(vettProcessi.durata[i]==vettProcessi[i+1].durata)
+             if(vettProcessi[i].inizio>vettProcessi[i+1].inizio)
+             swap(vettProcessi[i],vettProcessi[i+1]);
+
+    }
     }
     for(int i=0;i<n;i++){
         vettProcessi[i].fine=vettProcessi[i].arrivo+vettProcessi[i].durata;
